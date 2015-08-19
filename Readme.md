@@ -86,12 +86,12 @@ still the essence is same).
 You can set the base URL at `BaseTestCase.php` and users of the application at `BaseUserTestCase.php` constructor method. like
 
 ```
- public function __construct()
-    {
-        parent::__construct($name, $data, $dataName);
+public function __construct()
+{
+    parent::__construct($name, $data, $dataName);
 
-        $this->baseUrl = 'http://drupal-test.jelastic.elastx.net/'; //change this to your application URL, remember the trailing slash
-    }
+    $this->baseUrl = 'http://drupal-test.jelastic.elastx.net/'; //change this to your application URL, remember the trailing slash
+}
 ```
 
 You can add your frontend paths in `providerFrontEnd` method in the PagesTest.Case extended from BaseTestCase.php file like below:
