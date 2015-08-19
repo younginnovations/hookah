@@ -1,6 +1,6 @@
 # Hookah
 
-Remember the baaje le tanne hookah?
+Remember the baaje le tanne hookah? We do remember it at [YIPL](http://yipl.com.np).
 
 ![Hookah Smoke tests](https://s3-ap-southeast-1.amazonaws.com/uploads-ap.hipchat.com/140261/1343070/gFMGGSmSqflGxwI/hookah-nepal.jpg "Hookah Smoke tests")
 
