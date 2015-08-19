@@ -18,7 +18,7 @@ class BaseTestCase extends \PHPUnit_Framework_TestCase
     /**
      * @var string
      */
-    protected $baseUrl;
+    protected $baseUrl = 'http://drupal-test.jelastic.elastx.net/';
 
     /**
      * Constructor
@@ -31,7 +31,6 @@ class BaseTestCase extends \PHPUnit_Framework_TestCase
     {
         parent::__construct($name, $data, $dataName);
 
-        $this->baseUrl = 'http://drupal-test.jelastic.elastx.net/';
         $this->client = new Client(
             [
                 'base_url'        => $this->baseUrl,
