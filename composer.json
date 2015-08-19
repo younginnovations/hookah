@@ -8,7 +8,7 @@
             "email": "geshan@yipl.com.np"
         }
     ],
-    "require-dev": {
+    "require": {
         "phpunit/phpunit": "~4.8",
         "fabpot/goutte": "~2.0",
         "brianium/paratest": "~0.12"

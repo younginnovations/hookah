@@ -16,6 +16,11 @@ class BaseTestCase extends \PHPUnit_Framework_TestCase
     protected $client;
 
     /**
+     * @var string
+     */
+    protected $baseUrl;
+
+    /**
      * Constructor
      *
      * @param null $name
