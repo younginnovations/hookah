@@ -15,7 +15,10 @@ If you wish to do other behavior level testing then [Behat](http://behat.org)/[M
 
 ## Build Status
 
-It does not have tests for itself but it will check one of the websites provided in config.
+It does not have tests for itself but it will check one of the websites provided in config. For example a Drupal 7 test
+installation status is below:
+
+[![Build Status](https://travis-ci.org/younginnovations/hookah.svg?branch=master)](https://travis-ci.org/younginnovations/hookah)
 
 ## Prerequisites
 
