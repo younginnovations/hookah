@@ -1,0 +1,21 @@
+{
+    "name": "yipl/hookah",
+    "description": "A smoke test library with PHPUnit",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Geshan Manandhar",
+            "email": "geshan@yipl.com.np"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "~4.8",
+        "fabpot/goutte": "~2.0",
+        "brianium/paratest": "~0.12"
+    },
+    "autoload": {
+        "psr-4" : {
+            "Test\\" : "tests"
+        }
+    }
+}
