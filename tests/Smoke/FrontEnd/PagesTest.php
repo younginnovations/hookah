@@ -1,8 +1,8 @@
 <?php
 
-namespace Test\Smoke\FrontEnd;
+namespace YIPL\Hookah\Test\Smoke\FrontEnd;
 
-use Test\Smoke\BaseTestCase;
+use YIPL\Hookah\Test\Smoke\BaseTestCase;
 
 class PagesTest extends BaseTestCase
 {

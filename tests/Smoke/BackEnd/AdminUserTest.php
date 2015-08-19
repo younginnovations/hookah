@@ -1,8 +1,8 @@
 <?php
 
-namespace Test\Smoke\BackEnd;
+namespace YIPL\Hookah\Test\Smoke\BackEnd;
 
-use Test\Smoke\BaseUserTestCase;
+use YIPL\Hookah\Test\Smoke\BaseUserTestCase;
 
 class AdminUserTest extends BaseUserTestCase
 {

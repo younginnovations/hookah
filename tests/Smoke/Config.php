@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Smoke;
+namespace YIPL\Hookah\Test\Smoke;
 
 /**
  * All configs for the smoke tests

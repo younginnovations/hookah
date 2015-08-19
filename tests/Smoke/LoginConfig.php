@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Smoke;
+namespace YIPL\Hookah\Test\Smoke;
 
 /**
  * Class containing the configuration for Logging into the system

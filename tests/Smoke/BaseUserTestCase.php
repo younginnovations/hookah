@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Smoke;
+namespace YIPL\Hookah\Test\Smoke;
 
 use Goutte\Client as AuthenticatedClient;
 
