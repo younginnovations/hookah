@@ -75,7 +75,7 @@ class BaseUserTestCase extends BaseTestCase
 
     protected function authenticateClient()
     {
-        $crawler     = $this->authenticatedClient->request('GET', $this->baseUrl . $this->loginPath);
+        $crawler = $this->authenticatedClient->request('GET', $this->baseUrl . $this->loginPath);
         $form    = $crawler->selectButton($this->submitButtonText)->form();
         $crawler = $this->authenticatedClient->submit(
             $form,
