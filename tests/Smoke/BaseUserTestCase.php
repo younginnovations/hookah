@@ -17,9 +17,36 @@ class BaseUserTestCase extends BaseTestCase
     protected $user = [];
 
     /**
-     * @var Config
+     * @var string
      */
-    protected $config;
+    protected $loginPath = 'user/login';
+
+    /**
+     * @var string
+     */
+    protected $usernameField = 'name';
+
+    /**
+     * @var string
+     */
+    protected $passwordField = 'pass';
+
+    /**
+     * @var string
+     */
+    protected $submitButtonText = 'Log in';
+
+    /**
+     * @var array
+     */
+    protected $users =  [
+        ['role'=> 'admin', 'identifier' => 'admin', 'password' => '123admin'],
+    ];
+
+    /**
+     * @var string
+     */
+    protected $loggedInLinkText = 'Log out';
 
     /**
      * To be overridden by child class
@@ -34,19 +61,12 @@ class BaseUserTestCase extends BaseTestCase
      * @param null $name
      * @param array $data
      * @param string $dataName
+     *
      * @throws \Exception
      */
     public function __construct($name = null, $data = [], $dataName = '')
     {
         parent::__construct($name, $data, $dataName);
-
-        $this->config = new Config(
-            new LoginConfig('user/login', 'name', 'pass', 'Log in'),
-            [
-                ['role'=> 'admin', 'identifier' => 'admin', 'password' => '123admin'],
-            ],
-            'Log out'
-        );
 
         $this->authenticatedClient = new AuthenticatedClient();
         $this->user                = $this->getUserByRole($this->userRole);
@@ -55,19 +75,18 @@ class BaseUserTestCase extends BaseTestCase
 
     protected function authenticateClient()
     {
-        $loginConfig = $this->config->getLoginConfig();
-        $crawler     = $this->authenticatedClient->request('GET', $this->baseUrl . $loginConfig->getLoginPath());
-        $form    = $crawler->selectButton($loginConfig->getSubmitButtonText())->form();
+        $crawler     = $this->authenticatedClient->request('GET', $this->baseUrl . $this->loginPath);
+        $form    = $crawler->selectButton($this->submitButtonText)->form();
         $crawler = $this->authenticatedClient->submit(
             $form,
             [
-                $loginConfig->getUsernameField() => $this->user['identifier'],
-                $loginConfig->getPasswordField() => $this->user['password']
+                $this->usernameField => $this->user['identifier'],
+                $this->passwordField => $this->user['password']
             ]
         );
         $this->assertEquals(
-            $this->config->getLoggedInLinkText(),
-            $crawler->selectLink($this->config->getLoggedInLinkText())->text()
+            $this->loggedInLinkText,
+            $crawler->selectLink($this->loggedInLinkText)->text()
         );
         $this->printLn(
             sprintf('Authenticating with user %s wth role %s was Ok', $this->user['identifier'], $this->user['role'])
@@ -76,7 +95,7 @@ class BaseUserTestCase extends BaseTestCase
 
     protected function getUserByRole($role)
     {
-        foreach ($this->config->getUsers() as $user) {
+        foreach ($this->users as $user) {
             if ($user['role'] === $role) {
                 return $user;
             }
