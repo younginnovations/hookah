@@ -33,6 +33,27 @@ Hookah can be cloned after from this github repository and installed following t
 * cd hookah
 * composer install --prefer-dist
 
+## Use with other projects
+
+You can use hookah with other projects, it is available on [packagist](http://bit.ly/1LiDppx) and you can get it using 
+composer. The following ways:
+
+### With comoser require
+
+You can run composer require like the following to get hookah added to your composer.json file:
+
+```
+composer require --dev yipl/hookah
+```
+
+### Add hookah to your composer.json file
+
+You can even add the following to your `composer.json` in the `require-dev` part:
+
+```
+	"yipl/hookah":	"~0.4"
+```
+
 ## Run
 
 The app can be run with the command below:
