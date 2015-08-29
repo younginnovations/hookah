@@ -38,7 +38,7 @@ Hookah can be cloned after from this github repository and installed following t
 You can use hookah with other projects, it is available on [packagist](http://bit.ly/1LiDppx) and you can get it using 
 composer. The following ways:
 
-### With comoser require
+### With composer require
 
 You can run composer require like the following to get hookah added to your composer.json file:
 
