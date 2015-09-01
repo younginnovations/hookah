@@ -195,3 +195,7 @@ We follow PSR-2 even to write tests.
 
 It can be integrated with travis CI to run the test on each push check the `.travis.yml` file in root of this project. 
 It can be integrated in the same way with other CI systems too.
+
+## Contribute
+
+We would like to hear from you.
