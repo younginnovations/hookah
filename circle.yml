@@ -1,0 +1,14 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker pull geshan/php-composer-alpine
+    - docker run -v $(pwd):/var/www geshan/php-composer-alpine "composer install --prefer-souce --no-interaction"
+  cache_directories:
+    - "vendor"
+
+test:
+  override:
+    - docker run -v $(pwd):/var/www geshan/php-composer-alpine "./vendor/bin/paratest -f --colors -m 2 -p 4 tests"
