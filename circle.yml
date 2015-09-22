@@ -5,7 +5,7 @@ machine:
 dependencies:
   override:
     - docker pull geshan/php-composer-alpine
-    - docker run -v $(pwd):/var/www geshan/php-composer-alpine "composer install --prefer-souce --no-interaction"
+    - docker run -v $(pwd):/var/www geshan/php-composer-alpine "composer install --prefer-source --no-interaction"
   cache_directories:
     - "vendor"
 
