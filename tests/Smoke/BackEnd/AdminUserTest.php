@@ -12,7 +12,7 @@ class AdminUserTest extends BaseUserTestCase
     protected $userRole = 'admin';
 
     /**
-     * Constructor
+     * Constructor.
      *
      * @param null   $name
      * @param array  $data
@@ -24,7 +24,7 @@ class AdminUserTest extends BaseUserTestCase
     }
 
     /**
-     * List all your admin role paths below
+     * List all your admin role paths below.
      *
      * @return array
      */
@@ -33,14 +33,13 @@ class AdminUserTest extends BaseUserTestCase
         $adminPaths = [
             ['admin', 200],
             ['admin/config', 200],
-            ['not-existing', 404]
+            ['not-existing', 404],
         ];
 
         return $adminPaths;
     }
 
     /**
-     *
      * @throws \Exception
      */
     public function testAdminPageAccessIsOk()

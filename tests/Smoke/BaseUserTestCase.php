@@ -39,8 +39,8 @@ class BaseUserTestCase extends BaseTestCase
     /**
      * @var array
      */
-    protected $users =  [
-        ['role'=> 'admin', 'identifier' => 'admin', 'password' => '123admin'],
+    protected $users = [
+        ['role' => 'admin', 'identifier' => 'admin', 'password' => '123admin'],
     ];
 
     /**
@@ -49,17 +49,17 @@ class BaseUserTestCase extends BaseTestCase
     protected $loggedInLinkText = 'Log out';
 
     /**
-     * To be overridden by child class
+     * To be overridden by child class.
      *
      * @var string
      */
-    protected  $userRole = 'none';
+    protected $userRole = 'none';
 
     /**
-     * Constructor
+     * Constructor.
      *
-     * @param null $name
-     * @param array $data
+     * @param null   $name
+     * @param array  $data
      * @param string $dataName
      *
      * @throws \Exception
@@ -69,19 +69,19 @@ class BaseUserTestCase extends BaseTestCase
         parent::__construct($name, $data, $dataName);
 
         $this->authenticatedClient = new AuthenticatedClient();
-        $this->user                = $this->getUserByRole($this->userRole);
+        $this->user = $this->getUserByRole($this->userRole);
         $this->authenticateClient();
     }
 
     protected function authenticateClient()
     {
-        $crawler = $this->authenticatedClient->request('GET', $this->baseUrl . $this->loginPath);
-        $form    = $crawler->selectButton($this->submitButtonText)->form();
+        $crawler = $this->authenticatedClient->request('GET', $this->baseUrl.$this->loginPath);
+        $form = $crawler->selectButton($this->submitButtonText)->form();
         $crawler = $this->authenticatedClient->submit(
             $form,
             [
                 $this->usernameField => $this->user['identifier'],
-                $this->passwordField => $this->user['password']
+                $this->passwordField => $this->user['password'],
             ]
         );
         $this->assertEquals(
@@ -106,7 +106,7 @@ class BaseUserTestCase extends BaseTestCase
 
     protected function makeAuthenticatedCall($method = 'GET', $path, $responseCode)
     {
-        $crawler = $this->authenticatedClient->request($method, $this->baseUrl . $path);
+        $crawler = $this->authenticatedClient->request($method, $this->baseUrl.$path);
         $this->assertEquals(
              $responseCode,
              $this->authenticatedClient->getResponse()->getStatus(),
