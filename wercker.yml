@@ -1,4 +1,4 @@
-box: wercker/php
+box: alanbem/wercker-php
 
 build:
   steps:
