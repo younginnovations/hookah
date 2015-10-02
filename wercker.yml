@@ -1,4 +1,6 @@
-box: alanbem/wercker-php
+box: 
+  id: geshan/php-composer-alpine
+  cmd: /bin/sh
 
 build:
   steps:
