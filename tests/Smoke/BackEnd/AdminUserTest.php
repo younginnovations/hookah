@@ -31,9 +31,9 @@ class AdminUserTest extends BaseUserTestCase
     public function providerAdminPaths()
     {
         $adminPaths = [
-            ['admin', 200],
-            ['admin/config', 200],
-            ['not-existing', 404]
+            ['/admin', 200],
+            ['/admin/config', 200],
+            ['/not-existing', 404]
         ];
 
         return $adminPaths;
