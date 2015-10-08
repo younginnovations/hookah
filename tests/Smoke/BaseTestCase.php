@@ -18,7 +18,7 @@ class BaseTestCase extends \PHPUnit_Framework_TestCase
     /**
      * @var string
      */
-    protected $baseUrl = 'http://drupal-test.jelastic.elastx.net/';
+    protected $baseUrl = 'http://drupal-test.jelastic.elastx.net';
 
     /**
      * Constructor
