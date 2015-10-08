@@ -15,9 +15,9 @@ class PagesTest extends BaseTestCase
     {
         return [
             [$this->baseUrl, 200],
-            ['about', 200],
-            ['not-existing', 404],
-            ['.git', 403],
+            ['/about', 200],
+            ['/not-existing', 404],
+            ['/.git', 403],
         ];
     }
 
