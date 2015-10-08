@@ -28,7 +28,7 @@ class PagesTest extends BaseTestCase
     {
         $this->printLn(sprintf('Testing page %s to be %s', $path, $responseCode));
 
-        $response = $this->client->get($path, ['exceptions' => false]);
+        $response = $this->client->get($this->baseUrl . $path, ['exceptions' => false]);
         $this->assertEquals(
             $responseCode,
             $response->getStatusCode(),
