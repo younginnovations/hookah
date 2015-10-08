@@ -19,7 +19,7 @@ class BaseUserTestCase extends BaseTestCase
     /**
      * @var string
      */
-    protected $loginPath = 'user/login';
+    protected $loginPath = '/user/login';
 
     /**
      * @var string
