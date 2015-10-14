@@ -2,7 +2,7 @@
 
 Remember the baaje le tanne hookah? We do remember it at [YIPL](http://yipl.com.np).
 
-![Hookah Smoke tests](https://s3-ap-southeast-1.amazonaws.com/uploads-ap.hipchat.com/140261/1343070/gFMGGSmSqflGxwI/hookah-nepal.jpg "Hookah Smoke tests")
+![Hookah Smoke tests](https://cloud.githubusercontent.com/assets/170554/10163666/811c4604-66c5-11e5-9335-41abc5dd1054.png "Hookah Smoke tests")
 
 Hookah is a small [smoke testing](https://en.wikipedia.org/wiki/Smoke_testing_(software)) command line library for any 
 web application. As it is just a sanity check it checks if the given URL returns back the right response code, and body is not empty. 
