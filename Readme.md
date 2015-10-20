@@ -198,4 +198,4 @@ It can be integrated in the same way with other CI systems too.
 
 ## Contribute
 
-We would like to hear from you.
+We would like to hear from you. Or just open a PR.
