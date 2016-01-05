@@ -5,8 +5,7 @@ namespace YIPL\Hookah\Test\Smoke;
 use GuzzleHttp\Client;
 
 /**
- * Class BaseTestCase
- * @package Test\Smoke
+ * Class BaseTestCase.
  */
 class BaseTestCase extends \PHPUnit_Framework_TestCase
 {
@@ -21,10 +20,10 @@ class BaseTestCase extends \PHPUnit_Framework_TestCase
     protected $baseUrl = 'http://drupal-test.jelastic.elastx.net/';
 
     /**
-     * Constructor
+     * Constructor.
      *
-     * @param null $name
-     * @param array $data
+     * @param null   $name
+     * @param array  $data
      * @param string $dataName
      */
     public function __construct($name = null, $data = [], $dataName = '')
@@ -35,18 +34,18 @@ class BaseTestCase extends \PHPUnit_Framework_TestCase
             [
                 'base_uri'        => $this->baseUrl,
                 'cookies'         => true,
-                'allow_redirects' => false
+                'allow_redirects' => false,
             ]
         );
     }
 
     protected function printLn($string)
     {
-        print sprintf('%s%s', $string, PHP_EOL);
+        echo sprintf('%s%s', $string, PHP_EOL);
     }
 
     protected function printSeparator()
     {
-        print sprintf('%s===============================================%s', PHP_EOL, PHP_EOL);
+        echo sprintf('%s===============================================%s', PHP_EOL, PHP_EOL);
     }
 }

@@ -7,7 +7,7 @@ use YIPL\Hookah\Test\Smoke\BaseTestCase;
 class PagesTest extends BaseTestCase
 {
     /**
-     * List all your front-end/public paths below
+     * List all your front-end/public paths below.
      *
      * @return array
      */
