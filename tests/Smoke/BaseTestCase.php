@@ -33,7 +33,7 @@ class BaseTestCase extends \PHPUnit_Framework_TestCase
 
         $this->client = new Client(
             [
-                'base_url'        => $this->baseUrl,
+                'base_uri'        => $this->baseUrl,
                 'cookies'         => true,
                 'allow_redirects' => false
             ]
