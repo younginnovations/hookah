@@ -54,6 +54,12 @@ You can even add the following to your `composer.json` in the `require-dev` part
 	"yipl/hookah":	"~0.4"
 ```
 
+If you want to use goutte `3.1 use the following version:
+
+```
+    "yipl/hookah":  "~0.5"
+```
+
 ## Run
 
 The app can be run with the command below:
