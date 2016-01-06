@@ -1,0 +1,14 @@
+---
+engines:
+  eslint:
+    enabled: false
+  csslint:
+    enabled: false
+  phpcodesniffer:
+    enabled: true
+ratings:
+  paths:
+  - "**.js"
+  - "**.php"
+exclude_paths:
+- vendor/**/*
