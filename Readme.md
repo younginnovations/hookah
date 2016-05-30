@@ -20,6 +20,12 @@ installation status is below:
 
 [![Build Status](https://travis-ci.org/younginnovations/hookah.svg?branch=master)](https://travis-ci.org/younginnovations/hookah)
 
+## Code Quality
+
+Code quality is analyzed on CodeClimate.
+
+[![Code Climate](https://codeclimate.com/github/younginnovations/hookah/badges/gpa.svg)](https://codeclimate.com/github/younginnovations/hookah)
+
 ## Prerequisites
 
 You will need PHP installed on your system and have composer running, the package depends on [PHPUnit](https://phpunit.de/)
